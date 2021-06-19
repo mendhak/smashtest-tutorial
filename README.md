@@ -184,6 +184,46 @@ Open Firefox
 
 ```
 
-Run the test to ensure it's still working, `npx smashtest`.  Note that the URL matching is inexact, as long as part of the URL matches, it will pass.  It's also possible to use regex here. 
+Run the test to ensure it's still working, `npx smashtest`.  The URL matching is inexact, as long as part of the URL matches, it will pass.  It's also possible to use regex here. 
+
+
+## Create functions
+
+Although `main.smash` and `links.smash` are different tests, they have the same initial steps: go to the home page and dismiss a dialog.  Repeated steps can be turned into functions.  
+
+Create a `go-to-homepage.smash`, and create a function using the `* functionname` syntax: 
+
+
+```
+* Go to the startpage
+
+    Open Firefox
+
+        Navigate to 'https://www.google.com'
+
+            Click ['I agree']
+
+```
+
+Now change the first part of `links.smash` and `main.smash` to use that function just created. 
+
+```
+Go to the startpage
+
+    Type 'hello world[enter]' into 'input'
+
+    Type 'hello universe[enter]' into 'input'
+            
+```
+
+```
+Go to the startpage
+
+    Click ['About']
+
+        Verify at page 'https://about.google/'
+```
+
+Run `npx smashtest` to ensure the tests are still passing.
 
 
