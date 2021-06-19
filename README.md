@@ -139,3 +139,29 @@ Open Firefox
 Run the test with `npx smashtest --headless=false` and two browser windows open.  
 
 Indented instructions happen one after the other. Instructions at the same level, next to each other, create branches which run separately. The above example results in two branches and therefore two browsers.  
+
+## Verify elements on the page
+
+We can verify that elements are visible on the page.  
+
+On the 'hello world' search results page, one of the top links was to Wikipedia.  On the 'hello universe' page, there was a side bar referring to an author.  We can verify both of these. 
+
+
+```
+Open Firefox
+
+    Navigate to 'https://www.google.com'
+
+        Click ['I agree']
+
+            Type 'hello world[enter]' into 'input'
+                
+                Verify [a, 'Wikipedia'] is visible
+
+            Type 'hello universe[enter]' into 'input'
+
+                Verify ['Erin Entrada Kelly'] is visible
+```
+
+The first verify looks for a link with the word Wikipedia in it.  The second looks for any element with the author's name in it. 
+
