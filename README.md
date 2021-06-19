@@ -120,3 +120,22 @@ Rerun the test using `npx smashtest --headless=false` to see the steps in action
 
 
 
+## Running tests in branches
+
+Write a test which goes to Google's page, but do two different searches at the same indent level.  
+
+```
+Open Firefox
+
+    Navigate to 'https://www.google.com'
+
+        Click ['I agree']
+
+            Type 'hello world[enter]' into 'input'
+
+            Type 'hello universe[enter]' into 'input'
+```
+
+Run the test with `npx smashtest --headless=false` and two browser windows open.  
+
+Indented instructions happen one after the other. Instructions at the same level, next to each other, create branches which run separately. The above example results in two branches and therefore two browsers.  
