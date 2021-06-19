@@ -1,0 +1,23 @@
+Open Firefox
+
+    Navigate to 'https://developer.mozilla.org/'
+
+        On MDN {
+            props({
+                'Search box': `#main-q`,
+                'Search Result Link': `div.search-results h3`,
+                'Change Language Link': `'Change language'`,
+                'Dutch language option': `#language-selector option[value="de"]`,
+                'Change Language Button': `button, 'Change language'`
+            })
+        }
+
+            Type 'splice[enter]' into 'Search box'
+
+                Click '1st Search Result Link'
+
+                    Click 'Change Language Link'
+
+                        Click 'Dutch language option'
+
+                            Click 'Change Language Button'
