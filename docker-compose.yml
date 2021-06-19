@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+    hub:
+        image: selenium/hub:latest
+        ports: 
+          - 4444:4444
+    chrome:
+        image: selenium/node-chrome-debug:latest
+        environment:
+          - HUB_PORT_4444_TCP_ADDR=hub
+          - HUB_PORT_4444_TCP_PORT=4444
+        depends_on:
+          - hub
+    firefox:
+        image: selenium/node-firefox-debug:latest
+        environment:
+          - HUB_PORT_4444_TCP_ADDR=hub
+          - HUB_PORT_4444_TCP_PORT=4444
+        depends_on:
+          - hub
