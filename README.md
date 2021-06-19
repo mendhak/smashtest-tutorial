@@ -120,7 +120,7 @@ Rerun the test using `npx smashtest --headless=false` to see the steps in action
 
 
 
-## Running tests in branches
+## Run tests in branches
 
 Write a test which goes to Google's page, but do two different searches at the same indent level.  
 
