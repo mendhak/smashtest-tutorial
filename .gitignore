@@ -3,5 +3,4 @@
 *.zip
 node_modules
 smashtest/
-*.smash
 gecko*
