@@ -163,5 +163,27 @@ Open Firefox
                 Verify ['Erin Entrada Kelly'] is visible
 ```
 
+Run the test to ensure it's still working, `npx smashtest`. 
+
 The first verify looks for a link with the word Wikipedia in it.  The second looks for any element with the author's name in it. 
+
+## Verify URLs
+
+We can also verify URLs and page titles.  Create a new smash file called `links.smash`.  This time, go to the Google home page but click the 'About' link, and verify the URL. 
+
+```
+Open Firefox
+
+    Navigate to 'https://www.google.com'
+
+        Click ['I agree']
+
+            Click ['About']
+
+                Verify at page 'https://about.google/'
+
+```
+
+Run the test to ensure it's still working, `npx smashtest`.  Note that the URL matching is inexact, as long as part of the URL matches, it will pass.  It's also possible to use regex here. 
+
 
