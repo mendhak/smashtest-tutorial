@@ -16,6 +16,17 @@ cd smashtest-tutorial
 
 Get the latest [Firefox Gecko web driver](https://github.com/mozilla/geckodriver/releases).  
 
+On Ubuntu: 
+
 ```
 wget -c https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-linux64.tar.gz -O - | tar -xz
+```
+
+On Windows:
+
+```
+```
+wget https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-win64.zip -o geckodriver.zip
+Expand-Archive geckodriver.zip -DestinationPath .
+rm geckodriver.zip
 ```
