@@ -30,3 +30,12 @@ wget https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodrive
 Expand-Archive geckodriver.zip -DestinationPath .
 rm geckodriver.zip
 ```
+
+
+### Install Smashtest 
+
+The Smashtest package is available via npm. 
+
+```
+npm install
+```
