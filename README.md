@@ -67,3 +67,52 @@ npx smashtest --screenshots=true
 ```
 
 Preview the `smashtest/report.html` file which shows the output with screenshots.
+
+
+## Write a test interactively
+
+Replace `main.smash`, and put these lines in:
+
+```
+Open Firefox
+
+    ~ Navigate to 'https://www.google.com'
+
+```    
+
+Run `npx smashtest` and the browser window will open. The terminal will go into interactive (REPL) mode, and a browser window opens up, because you used `~` above. 
+
+In the terminal you can now type Smashtest commands and try things out. Press enter to proceed to the Google homepage. 
+
+From the terminal, you can click the 'I agree' button. 
+
+```
+Click ['I agree']
+```
+
+The dialog disappears. 
+
+You can then perform a search. 
+
+```
+Type 'hello world[enter]' into 'input'
+```
+
+That takes you to a search results page. 
+
+Use `x` to exit the REPL. 
+
+Put what you've learned so far into the `main.smash`
+
+```
+Open Firefox
+
+    Navigate to 'https://www.google.com'
+
+        Click ['I agree']
+
+            Type 'hello world[enter]' into 'input'
+```
+
+Rerun the test using `npx smashtest --headless=false` and watch the steps in action. 
+
