@@ -22,7 +22,7 @@ On Ubuntu:
 wget -c https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-linux64.tar.gz -O - | tar -xz
 ```
 
-On Windows:
+On Windows (Powershell):
 
 ```
 wget https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-win64.zip -o geckodriver.zip
@@ -38,3 +38,32 @@ The Smashtest package is available via npm.
 ```
 npm install
 ```
+
+
+## Write your first test
+
+Create a `main.smash` file.  Add these contents: 
+
+```
+Open Firefox
+
+    Navigate to 'https://example.com'
+
+        Click ['More information...']
+```
+
+Run the test visually
+
+```
+npx smashtest --headless=false
+```
+
+The `headless=false` opens up a browser window so you can see what is happening.
+
+Now run the test without a visible browser, but with screenshots instead: 
+
+```
+npx smashtest --screenshots=true
+```
+
+Preview the `smashtest/report.html` file which shows the output with screenshots.
