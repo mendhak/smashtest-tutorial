@@ -42,7 +42,7 @@ npm install
 
 ## Write your first test
 
-Create a `main.smash` file.  Add these contents: 
+Create a `main.smash` file.  Add these contents
 
 ```
 Open Firefox
@@ -52,26 +52,26 @@ Open Firefox
         Click ['More information...']
 ```
 
-Run the test visually
+Now run the test visually
 
 ```
 npx smashtest --headless=false
 ```
 
-The `headless=false` opens up a browser window so you can see what is happening.
+A browser window is launched, navigates to example.com and clicks "More Information".  The `headless=false` lets you see what is happening.
 
-Now run the test without a visible browser, but with screenshots instead: 
+You can also run the test headless, but view it as a series of screenshots instead.  
 
 ```
 npx smashtest --screenshots=true
 ```
 
-Preview the `smashtest/report.html` file which shows the output with screenshots.
+Preview the `smashtest/report.html` file, which shows the output with screenshots.
 
 
 ## Write a test interactively
 
-Replace `main.smash`, and put these lines in:
+Replace `main.smash`.  Put these contents in
 
 ```
 Open Firefox
@@ -80,11 +80,13 @@ Open Firefox
 
 ```    
 
-Run `npx smashtest` and the browser window will open. The terminal will go into interactive (REPL) mode, and a browser window opens up, because you used `~` above. 
+Run `npx smashtest` and the browser window will open, and the terminal goes into interactive mode because you used `~` above. 
 
-In the terminal you can now type Smashtest commands and try things out. Press enter to proceed to the Google homepage. 
+In the terminal you can now type Smashtest commands more interactively.  
 
-From the terminal, you can click the 'I agree' button. 
+Press enter in the terminal to proceed to the Google homepage. 
+
+You can click the 'I agree' button:
 
 ```
 Click ['I agree']
@@ -92,7 +94,7 @@ Click ['I agree']
 
 The dialog disappears. 
 
-You can then perform a search. 
+You can perform a search: 
 
 ```
 Type 'hello world[enter]' into 'input'
@@ -114,5 +116,7 @@ Open Firefox
             Type 'hello world[enter]' into 'input'
 ```
 
-Rerun the test using `npx smashtest --headless=false` and watch the steps in action. 
+Rerun the test using `npx smashtest --headless=false` to see the steps in action. 
+
+
 
