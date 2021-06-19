@@ -25,7 +25,6 @@ wget -c https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodr
 On Windows:
 
 ```
-```
 wget https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-win64.zip -o geckodriver.zip
 Expand-Archive geckodriver.zip -DestinationPath .
 rm geckodriver.zip
